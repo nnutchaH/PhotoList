@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-PhotoList-PhotoListUITests/Pods-PhotoList-PhotoListUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
