@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		4157669024342B23002B89D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4157668E24342B23002B89D2 /* LaunchScreen.storyboard */; };
 		4157669B24342B23002B89D2 /* PhotoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157669A24342B23002B89D2 /* PhotoListTests.swift */; };
 		415766A624342B23002B89D2 /* PhotoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415766A524342B23002B89D2 /* PhotoListUITests.swift */; };
+		415766B42434414F002B89D2 /* PhotoListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415766B32434414F002B89D2 /* PhotoListData.swift */; };
 		7ADCD0F81D63E81F29A54961 /* Pods_PhotoListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585DF76198618B94A7431B60 /* Pods_PhotoListTests.framework */; };
 		BDF7BF43E45B6A68A23217C0 /* Pods_PhotoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9163583F9CAC0D5954575F03 /* Pods_PhotoList.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		415766A124342B23002B89D2 /* PhotoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		415766A524342B23002B89D2 /* PhotoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListUITests.swift; sourceTree = "<group>"; };
 		415766A724342B23002B89D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		415766B32434414F002B89D2 /* PhotoListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListData.swift; sourceTree = "<group>"; };
 		4B639AFEC2850F0FF286E2EF /* Pods-PhotoList-PhotoListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoList-PhotoListUITests.debug.xcconfig"; path = "Target Support Files/Pods-PhotoList-PhotoListUITests/Pods-PhotoList-PhotoListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		585DF76198618B94A7431B60 /* Pods_PhotoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C02A426C0BFD8D332CFE4EE /* Pods-PhotoListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoListTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoListTests/Pods-PhotoListTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				4157668C24342B23002B89D2 /* Assets.xcassets */,
 				4157668E24342B23002B89D2 /* LaunchScreen.storyboard */,
 				4157669124342B23002B89D2 /* Info.plist */,
+				415766B32434414F002B89D2 /* PhotoListData.swift */,
 			);
 			path = PhotoList;
 			sourceTree = "<group>";
@@ -155,7 +158,6 @@
 				11CA370116FBF9EE0F80819F /* Pods-PhotoListTests.debug.xcconfig */,
 				7C02A426C0BFD8D332CFE4EE /* Pods-PhotoListTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -410,6 +412,7 @@
 			files = (
 				4157668824342B22002B89D2 /* ViewController.swift in Sources */,
 				4157668424342B22002B89D2 /* AppDelegate.swift in Sources */,
+				415766B42434414F002B89D2 /* PhotoListData.swift in Sources */,
 				4157668624342B22002B89D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
