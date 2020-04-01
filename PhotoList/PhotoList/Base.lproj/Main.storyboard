@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Photo List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PhotoListViewController" customModule="PhotoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,6 @@
                                                 <constraint firstItem="Iin-cp-MaK" firstAttribute="top" secondItem="IYh-cG-l3p" secondAttribute="top" constant="12" id="WPB-vT-sMY"/>
                                                 <constraint firstItem="Iin-cp-MaK" firstAttribute="leading" secondItem="1bU-N1-UiZ" secondAttribute="trailing" constant="12" id="a4c-28-s70"/>
                                                 <constraint firstItem="1bU-N1-UiZ" firstAttribute="leading" secondItem="IYh-cG-l3p" secondAttribute="leading" constant="12.5" id="d9a-cm-CF7"/>
-                                                <constraint firstItem="1bU-N1-UiZ" firstAttribute="top" secondItem="IYh-cG-l3p" secondAttribute="top" constant="12" id="eXE-bq-rMX"/>
                                                 <constraint firstAttribute="bottom" secondItem="1bU-N1-UiZ" secondAttribute="bottom" constant="12" id="j4w-YW-ijf"/>
                                                 <constraint firstAttribute="bottom" secondItem="34O-UG-ThD" secondAttribute="bottom" constant="77" id="jAM-Uc-KUp"/>
                                                 <constraint firstItem="34O-UG-ThD" firstAttribute="leading" secondItem="3Kh-P9-X7J" secondAttribute="trailing" constant="4" id="qKR-1G-e3m"/>

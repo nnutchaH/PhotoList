@@ -10,13 +10,15 @@
 		3A33EAA541CBA75ABE205D3D /* Pods_PhotoList_PhotoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0000949C6B53B5D5CB349ED1 /* Pods_PhotoList_PhotoListUITests.framework */; };
 		4157668424342B22002B89D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157668324342B22002B89D2 /* AppDelegate.swift */; };
 		4157668624342B22002B89D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157668524342B22002B89D2 /* SceneDelegate.swift */; };
-		4157668824342B22002B89D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157668724342B22002B89D2 /* ViewController.swift */; };
+		4157668824342B22002B89D2 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157668724342B22002B89D2 /* PhotoListViewController.swift */; };
 		4157668B24342B22002B89D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4157668924342B22002B89D2 /* Main.storyboard */; };
 		4157668D24342B23002B89D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4157668C24342B23002B89D2 /* Assets.xcassets */; };
 		4157669024342B23002B89D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4157668E24342B23002B89D2 /* LaunchScreen.storyboard */; };
 		4157669B24342B23002B89D2 /* PhotoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4157669A24342B23002B89D2 /* PhotoListTests.swift */; };
 		415766A624342B23002B89D2 /* PhotoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415766A524342B23002B89D2 /* PhotoListUITests.swift */; };
 		415766B42434414F002B89D2 /* PhotoListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415766B32434414F002B89D2 /* PhotoListData.swift */; };
+		415766B6243478AB002B89D2 /* PhotoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415766B5243478AB002B89D2 /* PhotoList.swift */; };
+		415766B82434BA63002B89D2 /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415766B72434BA63002B89D2 /* PhotoListRequest.swift */; };
 		7ADCD0F81D63E81F29A54961 /* Pods_PhotoListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585DF76198618B94A7431B60 /* Pods_PhotoListTests.framework */; };
 		BDF7BF43E45B6A68A23217C0 /* Pods_PhotoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9163583F9CAC0D5954575F03 /* Pods_PhotoList.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +47,7 @@
 		4157668024342B22002B89D2 /* PhotoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4157668324342B22002B89D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4157668524342B22002B89D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4157668724342B22002B89D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4157668724342B22002B89D2 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		4157668A24342B22002B89D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4157668C24342B23002B89D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4157668F24342B23002B89D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		415766A524342B23002B89D2 /* PhotoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListUITests.swift; sourceTree = "<group>"; };
 		415766A724342B23002B89D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		415766B32434414F002B89D2 /* PhotoListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListData.swift; sourceTree = "<group>"; };
+		415766B5243478AB002B89D2 /* PhotoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoList.swift; sourceTree = "<group>"; };
+		415766B72434BA63002B89D2 /* PhotoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListRequest.swift; sourceTree = "<group>"; };
 		4B639AFEC2850F0FF286E2EF /* Pods-PhotoList-PhotoListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoList-PhotoListUITests.debug.xcconfig"; path = "Target Support Files/Pods-PhotoList-PhotoListUITests/Pods-PhotoList-PhotoListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		585DF76198618B94A7431B60 /* Pods_PhotoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C02A426C0BFD8D332CFE4EE /* Pods-PhotoListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoListTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoListTests/Pods-PhotoListTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,12 +124,14 @@
 			children = (
 				4157668324342B22002B89D2 /* AppDelegate.swift */,
 				4157668524342B22002B89D2 /* SceneDelegate.swift */,
-				4157668724342B22002B89D2 /* ViewController.swift */,
+				4157668724342B22002B89D2 /* PhotoListViewController.swift */,
 				4157668924342B22002B89D2 /* Main.storyboard */,
 				4157668C24342B23002B89D2 /* Assets.xcassets */,
 				4157668E24342B23002B89D2 /* LaunchScreen.storyboard */,
 				4157669124342B23002B89D2 /* Info.plist */,
 				415766B32434414F002B89D2 /* PhotoListData.swift */,
+				415766B5243478AB002B89D2 /* PhotoList.swift */,
+				415766B72434BA63002B89D2 /* PhotoListRequest.swift */,
 			);
 			path = PhotoList;
 			sourceTree = "<group>";
@@ -410,9 +416,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4157668824342B22002B89D2 /* ViewController.swift in Sources */,
+				4157668824342B22002B89D2 /* PhotoListViewController.swift in Sources */,
 				4157668424342B22002B89D2 /* AppDelegate.swift in Sources */,
+				415766B6243478AB002B89D2 /* PhotoList.swift in Sources */,
 				415766B42434414F002B89D2 /* PhotoListData.swift in Sources */,
+				415766B82434BA63002B89D2 /* PhotoListRequest.swift in Sources */,
 				4157668624342B22002B89D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
