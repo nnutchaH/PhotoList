@@ -11,7 +11,7 @@ import Foundation
 import Moya
 
 enum PhotoList {
-    case feature
+    case page(page: Int)
 }
 
 extension PhotoList: TargetType {
@@ -21,7 +21,7 @@ extension PhotoList: TargetType {
     
     var path: String {
         switch self {
-        case .feature:
+        case .page:
             return "/v1/photos"
         }
     }
@@ -32,8 +32,8 @@ extension PhotoList: TargetType {
     
     var task: Task {
         switch self {
-        case .feature:
-            return .requestParameters(parameters: ["feature": "popular", "page": "1"], encoding: URLEncoding.queryString)
+        case let .page(page):
+            return .requestParameters(parameters: ["feature": "popular", "page": page], encoding: URLEncoding.queryString)
         }
     }
     

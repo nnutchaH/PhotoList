@@ -12,30 +12,35 @@ class PhotoListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    
     let network = Network()
     
     var photoListData: [PhotoListData] = []
-//        = [PhotoListData(imageURL: [], name: "", photoDescription: "", positiveVotesCount: 0)]
+    
+    var page = 1
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         network
-            .requestPhotoList(callback: { [weak self] in
-            self?.handleResponse(result: $0) })
+            .requestPhotoList(page: page, callback: { [weak self] in
+                self?.handleResponse(result: $0) })
         
     }
-
-    private func handleResponse(result: Result<The500Px, Error>)
-    {
-        switch result
-        {
+    
+    private func handleResponse(result: Result<The500Px, Error>) {
+        switch result {
         case .success(let data):
-            self.photoListData = data.photos
-            tableView.reloadData()
+            self.photoListData.append(contentsOf: data.photos)
+            self.tableView.reloadData()
+              self.loadingView.isHidden = true
+              self.tableView.reloadData()
+              self.page += 1
         case .failure(let error):
             print("error: \(error)")
+            self.loadingView.isHidden = true
         }
     }
 }
@@ -56,6 +61,8 @@ extension PhotoListViewController: UITableViewDataSource {
             
             cell.setupUI(photoList: photoList)
             
+            cell.nameLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(500))
+            
             return cell
             
         }
@@ -63,6 +70,20 @@ extension PhotoListViewController: UITableViewDataSource {
             
             fatalError()
             
+        }
+    }
+}
+
+extension PhotoListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == photoListData.count - 1 && loadingView.isHidden {
+            
+            loadingView.isHidden = false
+            
+            network.requestPhotoList(page: page, callback: { [weak self] in
+            self?.handleResponse(result: $0) })
         }
     }
 }

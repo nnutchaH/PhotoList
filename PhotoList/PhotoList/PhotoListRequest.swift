@@ -13,11 +13,11 @@ class Network {
     
     let provider = MoyaProvider<PhotoList>()
     
-    func requestPhotoList(callback: ((Result<The500Px, Error>) -> Void)?) {
+    func requestPhotoList(page: Int, callback: ((Result<The500Px, Error>) -> Void)?) {
         
         provider
             .request(
-                .feature ) { result in
+            .page(page: page)) { result in
 
                 switch result
                 {
