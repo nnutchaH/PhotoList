@@ -7,6 +7,7 @@ target 'PhotoList' do
 
   # Pods for PhotoList
   pod 'Moya', '~> 14.0'
+  pod 'ObjectMapper', '~> 3.5'
 
   target 'PhotoListTests' do
     inherit! :search_paths
