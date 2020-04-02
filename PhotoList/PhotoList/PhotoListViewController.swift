@@ -15,8 +15,7 @@ class PhotoListViewController: UIViewController {
     let network = Network()
     
     var photoListData: [PhotoListData] = []
-//        = [PhotoListData(imageURL: [], name: "", photoDescription: "", positiveVotesCount: 0)]
-    
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -55,6 +54,8 @@ extension PhotoListViewController: UITableViewDataSource {
             let photoList = photoListData[indexPath.row]
             
             cell.setupUI(photoList: photoList)
+            
+            cell.nameLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(500))
             
             return cell
             
