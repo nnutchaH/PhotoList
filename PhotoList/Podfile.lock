@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.0.5)
+  - Kingfisher (5.13.3):
+    - Kingfisher/Core (= 5.13.3)
+  - Kingfisher/Core (5.13.3)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -7,20 +10,23 @@ PODS:
   - ObjectMapper (3.5.2)
 
 DEPENDENCIES:
+  - Kingfisher (~> 5.0)
   - Moya (~> 14.0)
   - ObjectMapper (~> 3.5)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - Moya
     - ObjectMapper
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  Kingfisher: d2b3d6a7200c93b34de9afcdf25c8dd9282ec277
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
 
-PODFILE CHECKSUM: 866828928260608eda993fda4327f855381fd297
+PODFILE CHECKSUM: 8c1fae83560155dafbeee48d7c677613a5b56d68
 
 COCOAPODS: 1.9.1

@@ -9,11 +9,16 @@
 import UIKit
 
 class PhotoListViewController: UIViewController {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     let network = Network()
-    var photoListData: [PhotoListData] = [PhotoListData(imageURL: [], name: "", photoDescription: "", positiveVotesCount: 0)]
+    
+    var photoListData: [PhotoListData] = []
+//        = [PhotoListData(imageURL: [], name: "", photoDescription: "", positiveVotesCount: 0)]
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         network
@@ -27,9 +32,37 @@ class PhotoListViewController: UIViewController {
         switch result
         {
         case .success(let data):
-            photoListData = data.photos
+            self.photoListData = data.photos
+            tableView.reloadData()
         case .failure(let error):
             print("error: \(error)")
+        }
+    }
+}
+
+extension PhotoListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return photoListData.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoListTableViewCell", for: indexPath) as? PhotoListTableViewCell {
+            
+            let photoList = photoListData[indexPath.row]
+            
+            cell.setupUI(photoList: photoList)
+            
+            return cell
+            
+        }
+        else {
+            
+            fatalError()
+            
         }
     }
 }
