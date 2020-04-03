@@ -20,7 +20,7 @@ class PhotoListTableViewCell: UITableViewCell {
     @IBOutlet weak var positiveVoteLabel: UILabel!
     
     func setupUI(photoList: PhotoListData) {
-
+        
         let url = URL(string: photoList.imageURL[0])
         imageURL.kf.setImage(with: url)
         
@@ -32,4 +32,5 @@ class PhotoListTableViewCell: UITableViewCell {
         positiveVoteLabel.text = formatter.string(from: NSNumber(value: photoList.positiveVotesCount))
         
     }
+    
 }

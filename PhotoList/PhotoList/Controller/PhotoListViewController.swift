@@ -11,13 +11,10 @@ import UIKit
 class PhotoListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
     let network = Network()
-    
     var photoListData: [PhotoListData] = []
-    
     var page = 1
     
     override func viewDidLoad() {
@@ -33,6 +30,7 @@ class PhotoListViewController: UIViewController {
     }
     
     private func handleResponse(result: Result<The500Px, Error>) {
+        
         switch result {
         case .success(let data):
             self.photoListData.append(contentsOf: data.photos)
@@ -43,7 +41,9 @@ class PhotoListViewController: UIViewController {
             print("error: \(error)")
             self.loadingView.isHidden = true
         }
+        
     }
+    
 }
 
 extension PhotoListViewController: UITableViewDataSource {
@@ -54,22 +54,21 @@ extension PhotoListViewController: UITableViewDataSource {
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if (indexPath.row + 1) % 5 == 0 {
-
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "InsertImageTableViewCell", for: indexPath) as! InsertImageTableViewCell
             
             return cell
-        }
-        else {
-
+            
+        } else {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoListTableViewCell", for: indexPath) as! PhotoListTableViewCell
             
             let photoList = photoListData[indexPath.row]
             
             cell.setupUI(photoList: photoList)
-            
             cell.nameLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(500))
             
             return cell
@@ -90,6 +89,7 @@ extension PhotoListViewController: UITableViewDelegate {
             network.requestPhotoList(page: page, callback: { [weak self] in
                 self?.handleResponse(result: $0) })
         }
+        
     }
+    
 }
-

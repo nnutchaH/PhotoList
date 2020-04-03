@@ -43,7 +43,6 @@ extension PhotoList: TargetType {
     var headers: [String : String]? {
         return ["Content-type": "application/json"]
     }
-    
 }
 
 // MARK: - Helpers

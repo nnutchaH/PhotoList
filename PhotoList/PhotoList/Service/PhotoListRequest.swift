@@ -18,29 +18,31 @@ class Network {
         provider
             .request(
             .page(page: page)) { result in
-
-                switch result
-                {
+                
+                switch result {
                 case .success(let response):
                     
                     let jsonDecoder = JSONDecoder()
                     jsonDecoder.dateDecodingStrategy = .iso8601
-
-                    do
-                    {
+                    
+                    do {
+                        
                         let data = try jsonDecoder.decode(The500Px.self, from: response.data)
                         
-                         callback?(.success(data))
-                    }
-                    catch
-                    {
+                        callback?(.success(data))
+                        
+                    } catch {
+                        
                         callback?(.failure(error))
+                        
                     }
-
+                    
                 case .failure(let error):
-
+                    
                     callback?(.failure(error))
                 }
-            }
+        }
+        
     }
+    
 }
