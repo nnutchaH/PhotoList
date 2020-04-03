@@ -12,18 +12,24 @@ import UIKit
 
 class PhotoListTableViewCell: UITableViewCell {
     
+    let formatter = NumberFormatter()
+    
     @IBOutlet weak var imageURL: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var positiveVoteLabel: UILabel!
     
     func setupUI(photoList: PhotoListData) {
-        
+
         let url = URL(string: photoList.imageURL[0])
         imageURL.kf.setImage(with: url)
+        
         nameLabel.text = photoList.name
+        
         descriptionLabel.text = photoList.photoDescription
-        positiveVoteLabel.text = String(photoList.positiveVotesCount)
+        
+        formatter.numberStyle = .decimal
+        positiveVoteLabel.text = formatter.string(from: NSNumber(value: photoList.positiveVotesCount))
         
     }
 }

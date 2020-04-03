@@ -20,9 +20,13 @@ class PhotoListViewController: UIViewController {
     
     var page = 1
     
+//    var count = 4
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "InsertImageTableViewCell", bundle: nil), forCellReuseIdentifier: "InsertImageTableViewCell")
         
         network
             .requestPhotoList(page: page, callback: { [weak self] in
@@ -35,9 +39,8 @@ class PhotoListViewController: UIViewController {
         case .success(let data):
             self.photoListData.append(contentsOf: data.photos)
             self.tableView.reloadData()
-              self.loadingView.isHidden = true
-              self.tableView.reloadData()
-              self.page += 1
+            self.loadingView.isHidden = true
+            self.page += 1
         case .failure(let error):
             print("error: \(error)")
             self.loadingView.isHidden = true
@@ -53,9 +56,18 @@ extension PhotoListViewController: UITableViewDataSource {
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoListTableViewCell", for: indexPath) as? PhotoListTableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+//        if indexPath.row == count  {
+//
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "InsertImageTableViewCell", for: indexPath) as! InsertImageTableViewCell
+//
+//            self.count += 5
+//            return cell
+//        }
+//        else {
+//
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoListTableViewCell", for: indexPath) as! PhotoListTableViewCell
             
             let photoList = photoListData[indexPath.row]
             
@@ -64,14 +76,10 @@ extension PhotoListViewController: UITableViewDataSource {
             cell.nameLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(500))
             
             return cell
-            
-        }
-        else {
-            
-            fatalError()
-            
-        }
+//        }
+        
     }
+    
 }
 
 extension PhotoListViewController: UITableViewDelegate {
@@ -83,7 +91,7 @@ extension PhotoListViewController: UITableViewDelegate {
             loadingView.isHidden = false
             
             network.requestPhotoList(page: page, callback: { [weak self] in
-            self?.handleResponse(result: $0) })
+                self?.handleResponse(result: $0) })
         }
     }
 }
