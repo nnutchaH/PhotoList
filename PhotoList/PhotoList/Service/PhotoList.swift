@@ -5,7 +5,6 @@
 //  Created by Pony💛 yyy on 1/4/2563 BE.
 //  Copyright © 2563 nnutcha. All rights reserved.
 //
-//https://api.500px.com/v1/photos?feature=popular&page=1
 
 import Foundation
 import Moya

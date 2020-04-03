@@ -20,8 +20,6 @@ class PhotoListViewController: UIViewController {
     
     var page = 1
     
-//    var count = 4
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -58,15 +56,14 @@ extension PhotoListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-//        if indexPath.row == count  {
-//
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "InsertImageTableViewCell", for: indexPath) as! InsertImageTableViewCell
-//
-//            self.count += 5
-//            return cell
-//        }
-//        else {
-//
+        if (indexPath.row + 1) % 5 == 0 {
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: "InsertImageTableViewCell", for: indexPath) as! InsertImageTableViewCell
+            
+            return cell
+        }
+        else {
+
             let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoListTableViewCell", for: indexPath) as! PhotoListTableViewCell
             
             let photoList = photoListData[indexPath.row]
@@ -76,7 +73,7 @@ extension PhotoListViewController: UITableViewDataSource {
             cell.nameLabel.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(500))
             
             return cell
-//        }
+        }
         
     }
     

@@ -103,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		414F280724373F7A008BBBAF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				415766B72434BA63002B89D2 /* PhotoListRequest.swift */,
+				415766B5243478AB002B89D2 /* PhotoList.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		4157667724342B22002B89D2 = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +137,12 @@
 		4157668224342B22002B89D2 /* PhotoList */ = {
 			isa = PBXGroup;
 			children = (
-				419DF16E24370F3E00677A9C /* Controller */,
-				419DF16C24370F2200677A9C /* Model */,
-				419DF16D24370F3400677A9C /* View */,
 				4157668324342B22002B89D2 /* AppDelegate.swift */,
 				4157668524342B22002B89D2 /* SceneDelegate.swift */,
+				419DF16E24370F3E00677A9C /* Controller */,
+				419DF16C24370F2200677A9C /* Model */,
+				414F280724373F7A008BBBAF /* Service */,
+				419DF16D24370F3400677A9C /* View */,
 				4157668C24342B23002B89D2 /* Assets.xcassets */,
 				4157668E24342B23002B89D2 /* LaunchScreen.storyboard */,
 				4157669124342B23002B89D2 /* Info.plist */,
@@ -161,9 +171,7 @@
 		419DF16C24370F2200677A9C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				415766B5243478AB002B89D2 /* PhotoList.swift */,
 				415766B32434414F002B89D2 /* PhotoListData.swift */,
-				415766B72434BA63002B89D2 /* PhotoListRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				4157668924342B22002B89D2 /* Main.storyboard */,
+				415F27492435877B001EA6EA /* PhotoListTableViewCell.swift */,
+				419DF1692436FCCB00677A9C /* InsertImageTableViewCell.xib */,
+				419DF1682436FCCB00677A9C /* InsertImageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,9 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				4157668724342B22002B89D2 /* PhotoListViewController.swift */,
-				415F27492435877B001EA6EA /* PhotoListTableViewCell.swift */,
-				419DF1682436FCCB00677A9C /* InsertImageTableViewCell.swift */,
-				419DF1692436FCCB00677A9C /* InsertImageTableViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

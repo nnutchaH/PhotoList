@@ -95,15 +95,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="dqp-MW-ayo"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" id="bP3-6N-rYv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="bP3-6N-rYv">
+                                <rect key="frame" x="177.66666666666666" y="396" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="aJb-eJ-T41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1SQ-Am-wBO"/>
                             <constraint firstItem="aJb-eJ-T41" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EOK-bF-EXT"/>
+                            <constraint firstItem="bP3-6N-rYv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ETb-Wd-SzZ"/>
+                            <constraint firstItem="bP3-6N-rYv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ots-yy-nCR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aJb-eJ-T41" secondAttribute="bottom" id="wtb-Ep-uIz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aJb-eJ-T41" secondAttribute="trailing" id="xCe-1u-nUc"/>
                         </constraints>
