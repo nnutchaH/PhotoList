@@ -9,10 +9,9 @@
 import UIKit
 
 class InsertImageTableViewCell: UITableViewCell {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-       
     }
     
 }

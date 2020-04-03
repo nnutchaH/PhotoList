@@ -11,7 +11,6 @@ import Kingfisher
 import UIKit
 
 class PhotoListTableViewCell: UITableViewCell {
-    
     let formatter = NumberFormatter()
     
     @IBOutlet weak var imageURL: UIImageView!
@@ -20,17 +19,11 @@ class PhotoListTableViewCell: UITableViewCell {
     @IBOutlet weak var positiveVoteLabel: UILabel!
     
     func setupUI(photoList: PhotoListData) {
-        
         let url = URL(string: photoList.imageURL[0])
         imageURL.kf.setImage(with: url)
-        
         nameLabel.text = photoList.name
-        
         descriptionLabel.text = photoList.photoDescription
-        
         formatter.numberStyle = .decimal
         positiveVoteLabel.text = formatter.string(from: NSNumber(value: photoList.positiveVotesCount))
-        
     }
-    
 }
