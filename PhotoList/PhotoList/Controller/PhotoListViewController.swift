@@ -9,12 +9,13 @@
 import UIKit
 
 class PhotoListViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
     
-    let network = Network()
-    var photoListData: [PhotoListData] = []
-    var page = 1
+    private let refreshControl = UIRefreshControl()
+    private let network = Network()
+    private var photoListData: [PhotoListData] = []
+    private var page = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class PhotoListViewController: UIViewController {
         network
             .requestPhotoList(page: page, callback: { [weak self] in
                 self?.handleResponse(result: $0) })
+        addRefreshControl()
     }
     
     private func handleResponse(result: Result<The500Px, Error>) {
@@ -35,6 +37,26 @@ class PhotoListViewController: UIViewController {
             print("error: \(error)")
             self.loadingView.isHidden = true
         }
+    }
+    
+    private func addRefreshControl() {
+        refreshControl.tintColor = .darkGray
+        refreshControl.addTarget(self, action: #selector(refreshProductListData(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc private func refreshProductListData(_ sender: Any) {
+        fetchProductListData()
+    }
+    
+    private func fetchProductListData() {
+        photoListData = []
+        page = 1
+        network
+            .requestPhotoList(page: page, callback: { [weak self] in
+                self?.handleResponse(result: $0) })
+        self.refreshControl.endRefreshing()
+        self.tableView.reloadData()
     }
 }
 
