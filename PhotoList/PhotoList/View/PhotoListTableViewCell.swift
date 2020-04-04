@@ -11,12 +11,12 @@ import Kingfisher
 import UIKit
 
 class PhotoListTableViewCell: UITableViewCell {
-    let formatter = NumberFormatter()
-    
     @IBOutlet weak var imageURL: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var positiveVoteLabel: UILabel!
+    
+    let formatter = NumberFormatter()
     
     func setupUI(photoList: PhotoListData) {
         let url = URL(string: photoList.imageURL[0])
