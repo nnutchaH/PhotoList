@@ -13,7 +13,7 @@ class PhotoListViewController: UIViewController {
     @IBOutlet private weak var loadingView: UIActivityIndicatorView!
     
     private let refreshControl = UIRefreshControl()
-    private let network = Network()
+    private let network = PhotoListRequest()
     private var photoListData: [PhotoListData] = []
     private var page = 1
     

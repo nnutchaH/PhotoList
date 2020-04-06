@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 
-class Network {
+class PhotoListRequest {
     let provider = MoyaProvider<PhotoList>()
     
     func requestPhotoList(page: Int, callback: ((Result<The500Px, Error>) -> Void)?) {
